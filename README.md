@@ -48,4 +48,4 @@ The deformable attention block performs a convolution operation to the key and v
 Here is a representative positive result. It shows good seperation and clear boundery of each biological structure.<br>
 <br>
 <div align=center><img src="/images/highest score.png"></div><br>
-<br>
+<p align=center>From left to right: original image, final result, ground truth</p><br>
