@@ -15,6 +15,6 @@ The encoder and decoder have a typical 5-layer convolutional neural network arch
 <div align=center><img width="200" src="/images/convolutional decoder.png"></div><br>
 <p align=center>The structure of convolutional decoder</p><br>
 <br>
-##Transformer block
+## Transformer block
 The deformable channel-wise transformer is designed to fuse the cross-channel feature dependencies to alleviate the drawback of skip connection. The block consists of three parts: the embedding layer, the multi-head channel-wise attention block and the deformable network.<br>
 <br>
