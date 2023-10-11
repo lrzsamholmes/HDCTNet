@@ -9,10 +9,10 @@ note: CNA refers to convolution, normalization and activation operation.<br>
 ## Convolutional encoder and decoder
 The encoder and decoder have a typical 5-layer convolutional neural network architecture. The encoder consists of maxpool operation, convolution, normalization and activation to extract features, layer by layer. Meanwhile, the decoder uses  upsample operation, convolution, normalization and activation to restore the image resolution.<br>
 <br>
-<div align=center><img width="200" src="/images/convolutional encoder.png"></div><br>
+<div align=center><img width="400" src="/images/convolutional encoder.png"></div><br>
 <p align=center>The structure of convolutional encoder</p><br>
 <br>
-<div align=center><img width="200" src="/images/convolutional decoder.png"></div><br>
+<div align=center><img width="400" src="/images/convolutional decoder.png"></div><br>
 <p align=center>The structure of convolutional decoder</p><br>
 
 ## Transformer block
@@ -25,7 +25,7 @@ Before feeding the output of the encoder to the attention block,  the ferature m
 <br>
 The structure of the deformable channel-wise attention is similar to the vanilla self-attention. However, the key and value matrices are no longer originated from one single layer input, but obtained from all levels of inputs. This modification helps to extract more inter-level connections.<br>
 <br>
-<div align=center><img width="400" src="/images/attention.png"></div><br>
+<div align=center><img width="600" src="/images/attention.png"></div><br>
 <p align=center>The structure of deformable attention block</p><br>
 <br>
 Then the linear tokens are reconstructed to 2D feature maps by the reconstruction block.<br>
