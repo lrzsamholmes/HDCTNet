@@ -18,3 +18,6 @@ The encoder and decoder have a typical 5-layer convolutional neural network arch
 ## Transformer block
 The deformable channel-wise transformer is designed to fuse the cross-channel feature dependencies to alleviate the drawback of skip connection. The block consists of three parts: the embedding layer, the multi-head channel-wise attention block and the deformable network.<br>
 <br>
+Before feeding the output of the encoder to the attention block,  the ferature maps need to be flattend to tokens, and transposed for channel-wise attention.<br>
+<div align=center><img width="200" src="/images/embedding.png"></div><br>
+<p align=center>The structure of embedding layer</p><br>
