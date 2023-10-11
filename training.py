@@ -42,7 +42,7 @@ def train(model, setting, optimizer, scheduler, epochs, batchSize, logger, resul
 
     # allocate and separately load train / val / test data sets
     dataset_Train = CustomDataSetRAM('train', logger)
-    dataloader_Train = DataLoader(dataset=dataset_Train, batch_size = batchSize, shuffle = True, num_workers = 6, worker_init_fn=worker_init_fn)
+    dataloader_Train = DataLoader(dataset=dataset_Train, batch_size = batchSize, shuffle = True, num_workers = 4, worker_init_fn=worker_init_fn)
 
     if 'val' in setting:
         dataset_Val = CustomDataSetRAM('val', logger)
@@ -362,7 +362,7 @@ if '__main__' == __name__:
     parser.add_argument('-m', '--model', default='HDCTNet')
     parser.add_argument('-s', '--setting', default='train_val_test')
     parser.add_argument('-e', '--epochs', default=1000, type=int)
-    parser.add_argument('-b', '--batchSize', default=6, type=int)
+    parser.add_argument('-b', '--batchSize', default=4, type=int)
     parser.add_argument('-r', '--lrate', default=0.001, type=float)
     parser.add_argument('-w', '--weightDecay', default=0.00001, type=float)
 
