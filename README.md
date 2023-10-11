@@ -3,7 +3,7 @@ The **H**ybrid **D**eformable **C**hannel **T**ransformer **N**etwork(HDCTNet) i
 <br>
 In this architecture, the deformable channel transformer block works as a bridge between the convolutional encoder and decoder. It is responsible for discovering cross channel feature dependencies in a more efficient way. <br>
 <br>
-![](/images/HDCTNet.png)
+<div align=center><img width="200" src="/images/HDCTNet.png"></div><br>
 note: CNA refers to convolution, normalization and activation operation.<br>
 <br>
 ## Convolutional encoder and decoder
@@ -12,6 +12,6 @@ The encoder and decoder have a typical 5-layer convolutional neural network arch
 <div align=center><img width="200" src="/images/convolutional_encoder.png"></div><br>
 The structure of convolutional encoder<br>
 <br>
-![](/images/convolutional_decoder.png)<br>
+<div align=center><img width="200" src="/images/convolutional_decoder.png"></div><br>
 The structure of convolutional decoder<br>
 <br>
