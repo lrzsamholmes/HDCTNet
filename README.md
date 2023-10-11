@@ -3,7 +3,7 @@ The **H**ybrid **D**eformable **C**hannel **T**ransformer **N**etwork(HDCTNet) i
 <br>
 In this architecture, the deformable channel transformer block works as a bridge between the convolutional encoder and decoder. It is responsible for discovering cross channel feature dependencies in a more efficient way. <br>
 <br>
-<div align=center><img width="200" src="/images/HDCTNet.png"></div><br>
+<div align=center><img src="/images/HDCTNet.png"></div><br>
 note: CNA refers to convolution, normalization and activation operation.<br>
 <br>
 ## Convolutional encoder and decoder
