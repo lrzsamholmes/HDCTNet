@@ -150,3 +150,4 @@ class HDCTNet(nn.Module):
             return logits, att_weights
         else:
             return logits
+            
