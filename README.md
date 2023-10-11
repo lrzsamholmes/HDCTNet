@@ -45,3 +45,7 @@ The deformable attention block performs a convolution operation to the key and v
 <p align=center>The colors indicate different biological structurtes.</p><br>
 
 ## Example of results
+Here is a representative positive result. It shows good seperation and clear boundery of each biological structure.<br>
+<br>
+<div align=center><img src="/images/highest score.png"></div><br>
+<br>
