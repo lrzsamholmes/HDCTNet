@@ -10,7 +10,7 @@ note: CNA refers to convolution, normalization and activation operation.<br>
 The encoder and decoder have a typical 5-layer convolutional neural network architecture. The encoder consists of maxpool operation, convolution, normalization and activation to extract features, layer by layer. Meanwhile, the decoder uses  upsample operation, convolution, normalization and activation to restore the image resolution.<br>
 <br>
 <div align=center><img width="200" src="/images/convolutional_encoder.png"></div><br>
-The structure of convolutional encoder<br>
+<p align=center>The structure of convolutional encoder</p><br>
 <br>
 <div align=center><img width="200" src="/images/convolutional_decoder.png"></div><br>
 The structure of convolutional decoder<br>
