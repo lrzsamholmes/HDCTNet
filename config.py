@@ -25,35 +25,17 @@ divideLRfactor=3.0
 
 saveFinalTestResults = True
 
-# CTrans configs
-def get_CTranS_config():
-    config = ml_collections.ConfigDict()
-    config.transformer = ml_collections.ConfigDict()
-    config.KV_size = 960  # KV_size = Q1 + Q2 + Q3 + Q4
-    config.transformer.num_heads  = 4
-    config.transformer.num_layers = 4
-    config.expand_ratio           = 4  # MLP channel dimension expand ratio
-    config.transformer.embeddings_dropout_rate = 0.1
-    config.transformer.attention_dropout_rate = 0.1
-    config.transformer.dropout_rate = 0
-    if useSmallEmb:
-        config.patch_sizes = [32,16,8,4]
-    else:
-        config.patch_sizes = [16,8,4,2]
-    config.base_channel = 64 # base channel of U-Net
-    return config
-
 # DCTrans configs
 def get_DCTrans_config():
     config = ml_collections.ConfigDict()
     config.transformer = ml_collections.ConfigDict()
     config.KV_size = 1472  # KV_size = Q1 + Q2 + Q3 + Q4 + Q5
-    config.transformer.num_heads  = 6
-    config.transformer.num_layers = 6
+    config.transformer.num_heads  = 4
+    config.transformer.num_layers = 4
     config.expand_ratio           = 4  # MLP channel dimension expand ratio
-    config.transformer.embeddings_dropout_rate = 0.5
-    config.transformer.attention_dropout_rate = 0.5
-    config.transformer.dropout_rate = 0.5
+    config.transformer.embeddings_dropout_rate = 0.1
+    config.transformer.attention_dropout_rate = 0.1
+    config.transformer.dropout_rate = 0.1
     config.offset_conv_k = 5
     config.offset_range_factor = 5
     if useSmallEmb:
