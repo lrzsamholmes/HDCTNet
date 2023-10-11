@@ -19,5 +19,29 @@ The encoder and decoder have a typical 5-layer convolutional neural network arch
 The deformable channel-wise transformer is designed to fuse the cross-channel feature dependencies to alleviate the drawback of skip connection. The block consists of three parts: the embedding layer, the multi-head channel-wise attention block and the deformable network.<br>
 <br>
 Before feeding the output of the encoder to the attention block,  the ferature maps need to be flattend to tokens, and transposed for channel-wise attention.<br>
+<br>
 <div align=center><img width="200" src="/images/embedding.png"></div><br>
 <p align=center>The structure of embedding layer</p><br>
+<br>
+The structure of the deformable channel-wise attention is similar to the vanilla self-attention. However, the key and value matrices are no longer originated from one single layer input, but obtained from all levels of inputs. This modification helps to extract more inter-level connections.<br>
+<br>
+<div align=center><img width="200" src="/images/attention.png"></div><br>
+<p align=center>The structure of deformable attention block</p><br>
+<br>
+Then the linear tokens are reconstructed to 2D feature maps by the reconstruction block.<br>
+<br>
+<div align=center><img width="200" src="/images/reconstruct.png"></div><br>
+<p align=center>The structure of reconstruction layer</p><br>
+<br>
+The deformable attention block performs a convolution operation to the key and value matrices and calculates an offset map which indicates the focus point. The offset map is then added to the key and value matrices with bilinear interpolation, so that the attention operation can focus on the most valuable parts.<br>
+<br>
+<div align=center><img width="200" src="/images/channel-wise deformable.png"></div><br>
+<p align=center>The structure of offset generation network</p><br>
+
+## Example of dataset
+<div align=center><img src="/images/dataset.png"></div><br>
+<p align=center>On the left: mouse kidney tissue stained by periodic acid schiff(PAS)</p>
+<p align=center>On the right: ground truth</p>
+<p align=center>The colors indicate different biological structurtes.</p><br>
+
+## Example of results
