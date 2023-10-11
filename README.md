@@ -6,3 +6,12 @@ In this architecture, the deformable channel transformer block works as a bridge
 ![](/images/HDCTNet.png)
 note: CNA refers to convolution, normalization and activation operation.<br>
 <br>
+## Convolutional encoder and decoder
+The encoder and decoder have a typical 5-layer convolutional neural network architecture. The encoder consists of maxpool operation, convolution, normalization and activation to extract features, layer by layer. Meanwhile, the decoder uses  upsample operation, convolution, normalization and activation to restore the image resolution.<br>
+<br>
+![](/images/convolutional encoder.png)
+The structure of convolutional encoder<br>
+<br>
+![](/images/convolutional decoder.png)
+The structure of convolutional decoder<br>
+<br>
