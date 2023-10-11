@@ -39,7 +39,7 @@ The deformable attention block performs a convolution operation to the key and v
 <p align=center>The structure of offset generation network</p><br>
 
 ## Example of dataset
-<div align=center><img width="400" src="/images/dataset.png"></div><br>
+<div align=center><img width="500" src="/images/dataset.png"></div><br>
 <p align=center>On the left: mouse kidney tissue stained by periodic acid schiff(PAS)</p>
 <p align=center>On the right: ground truth</p>
 <p align=center>The colors indicate different biological structurtes.</p><br>
