@@ -6,6 +6,12 @@ In this architecture, the deformable channel transformer block works as a bridge
 <div align=center><img src="/images/HDCTNet.png"></div><br>
 note: CNA refers to convolution, normalization and activation operation.<br>
 
+## Example of results
+Here is a representative positive result. It shows good seperation and clear boundery of each biological structure.<br>
+<br>
+<div align=center><img src="/images/highest score.png"></div><br>
+<p align=center>From left to right: original image, final result, ground truth</p><br>
+
 ## Convolutional encoder and decoder
 The encoder and decoder have a typical 5-layer convolutional neural network architecture. The encoder consists of maxpool operation, convolution, normalization and activation to extract features, layer by layer. Meanwhile, the decoder uses  upsample operation, convolution, normalization and activation to restore the image resolution.<br>
 <br>
@@ -37,15 +43,3 @@ The deformable attention block performs a convolution operation to the key and v
 <br>
 <div align=center><img width="200" src="/images/channel-wise deformable.png"></div><br>
 <p align=center>The structure of offset generation network</p><br>
-
-## Example of dataset
-<div align=center><img width="500" src="/images/dataset.png"></div><br>
-<p align=center>On the left: mouse kidney tissue stained by periodic acid schiff(PAS)</p>
-<p align=center>On the right: ground truth</p>
-<p align=center>The colors indicate different biological structurtes.</p><br>
-
-## Example of results
-Here is a representative positive result. It shows good seperation and clear boundery of each biological structure.<br>
-<br>
-<div align=center><img src="/images/highest score.png"></div><br>
-<p align=center>From left to right: original image, final result, ground truth</p><br>
